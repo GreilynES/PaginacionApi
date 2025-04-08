@@ -4,9 +4,10 @@ import './index.css'
 import App from './App.tsx'
 import ListProducts from './pages/Products/ListProducts.tsx'
 import ProductsPages from './pages/Products/ProductsPages.tsx'
+import ProductsSection from './pages/Products/ProductsSection.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ProductsPages />
+    <ProductsSection />
   </StrictMode>,
 )

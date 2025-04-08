@@ -31,3 +31,17 @@ export const useGetProductsbyPage = (tittle:string, skip:number) => {
 
     return { products };
 }
+
+export const useGetProductsbySections = (skip:number) => {
+    
+    const [products, setProducts] = useState<Product[]>([]);
+
+    useEffect(() => {
+            (async () => {
+                const products = await getProductsbyPage('', skip);
+                setProducts(products);
+              })();
+          }, [skip])
+
+    return { products };
+}

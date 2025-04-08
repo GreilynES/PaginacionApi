@@ -13,3 +13,9 @@ export async function getProductsbyPage(tittle: string, skip: number): Promise<P
     const data = await response.json();
     return data.products;  
 }
+
+export async function getProductsbySections(skip: number): Promise<Product[]>{
+    const response = await fetch(`${apiTienda}/products?limit=24&skip=${skip}`);
+    const data = await response.json();
+    return data.products;  
+}
